@@ -1,9 +1,9 @@
 import React from 'react'
-import {render} from 'react-dom'
+import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { ConnectedRouter } from 'connected-react-router'
-// import store, { history } from './store'
 import App from './containers/app'
+import { Route, Switch } from 'react-router-dom'
 
 import 'sanitize.css/sanitize.css'
 import './index.css'
@@ -17,7 +17,9 @@ render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <>
-      <App/>
+        <App />
+        <Switch>
+        </Switch>
       </>
     </ConnectedRouter>
   </Provider>,
